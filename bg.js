@@ -7,6 +7,9 @@ function paintImage(imgNumber) {
     image.src = `images/${imgNumber+1}.jpg`;
     body.appendChild(image);
     image.classList.add("bgImage");
+    const bgfade = document.createElement("div");
+    bgfade.className = "bg-fade";
+    body.appendChild(bgfade);
 }
 
 function genRandom() {
