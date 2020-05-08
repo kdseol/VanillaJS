@@ -3,10 +3,8 @@ const body = document.querySelector("body");
 const IMG_NUMBER = 5;
 
 function paintImage(imgNumber) {
-    const image = new Image();
-    image.src = `images/${imgNumber+1}.jpg`;
-    body.appendChild(image);
-    image.classList.add("bgImage");
+    body.style = `height: 100vh;  background: url("images/${imgNumber+1}.jpg") no-repeat center/cover; background-attachment: fixed;`
+    body.classList.add("bgImage");
     const bgfade = document.createElement("div");
     bgfade.className = "bg-fade";
     body.appendChild(bgfade);
