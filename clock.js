@@ -9,7 +9,7 @@ function getTime() {
     const seconds = date.getSeconds();
     clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${
         seconds < 10 ? `0${seconds}`:seconds }`;
-    clockTitle.classList = `display-1 text-light font-weight-normal text-center`
+    clockTitle.classList = `display-4 text-light font-weight-normal text-center`
 }
 
 function init() {

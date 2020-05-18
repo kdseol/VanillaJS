@@ -50,3 +50,8 @@ body {
     top:0px;
     z-index: -1;
 }
+ul{
+    list-style:none;
+    padding-left:0px;
+    }
+ 

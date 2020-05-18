@@ -30,13 +30,13 @@ function paintToDo(text) {
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
     const newId = toDos.length+1;
-    delBtn.style = "padding-right:10px;padding-left:10px;padding-top:3px;padding-bottom:3px;margin-bottom:7px;margin-right:20px;";
+    delBtn.style = "padding-right:5px;padding-left:5px;padding-top:1px;padding-bottom:1px;margin-bottom:7px;margin-right:10px;";
     delBtn.innerText = "X";
     delBtn.className = "btn btn-danger";
     delBtn.addEventListener("click", deleteToDo)
-    span.style = "line-height:50px;";
+    span.style = "line-height:2em;";
     span.innerText = text;
-    span.className = "h3 text-white";
+    span.className = "text-white";
     li.appendChild(delBtn);
     li.appendChild(span);
     li.id = newId;
