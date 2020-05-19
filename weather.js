@@ -1,4 +1,5 @@
 const weather = document.querySelector(".js-weather");
+const weatherIco = document.querySelector(".js-weather-ico")
 const API_KEY = "4f9734957d8d8eba76824776801647ff";
 const COORDS = 'coords';
 
@@ -9,7 +10,14 @@ function getWeather(lat, lng) {
     }).then(function(json) {
         const temperture = json.main.temp;
         const place = json.name;
-        weather.innerText = `${temperture} @ ${place}`;
+        const description = json.weather[0].description;
+        const icon = json.weather[0].icon;
+        weather.innerText = `@ ${place}`;
+        var icoUrl = `images/weather/${icon}.svg`
+
+        weatherIco.innerHTML = `${temperture}°C <img src=${icoUrl}><span class="h6">${description}</span>`
+        weatherIco.firstChild.nextSibling.style = `width: 6vh`
+     
     });
 
 }
